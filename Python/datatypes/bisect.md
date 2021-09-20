@@ -53,9 +53,9 @@ def bisect_left(A, x, lo=0, hi=None):
             #                        lo
             lo = mid + 1
         else:
-            #  mid               hi
-            # [ ... (val >= x) ... ]
-            #  hi
+            #       mid               hi
+            # ... ][ ... (val >= x) ... ]
+            #       hi
             hi = mid
 
     return lo
@@ -82,8 +82,8 @@ def bisect_right(A, x, lo=0, hi=None):
             hi = mid
         else:
             #  lo               mid
-            # [ ... (val <= x) ... ]
-            #                        lo
+            # [ ... (val <= x) ... ] [ ...
+            #                         lo
             lo = mid + 1
 
     return lo
